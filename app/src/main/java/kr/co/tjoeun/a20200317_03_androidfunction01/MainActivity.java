@@ -32,6 +32,14 @@ public class MainActivity extends AppCompatActivity {
         binding.goToSecondBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+//                SecondActivity로 이동하자
+//                입력한 메세지를 받아서, SecondActivity에 전달!
+                String inputMessage = binding.inputEdi.getText().toString();
+
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+//                inputMessage변수를, "message"라는 이름표를 붙여서 첨부.
+                intent.putExtra("message", inputMessage);
+
 
             }
         });
